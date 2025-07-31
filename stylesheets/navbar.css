@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+nav {
+    padding: .5rem 2rem;
+    background-color: antiquewhite;
+}
+
+.lg-logo img,
+.sm-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.lg-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lg-menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.lg-menu li {
+    list-style-type: none;
+}
+
+/* small display menu here */
+.sm-menu-container {
+    display: none;
+}
+
+.sm-logo {
+    display: none;
+}
+
+.sm-menu {
+    display: none;
+    text-align: right;
+    background-color: antiquewhite;
+}
+
+.sm-menu li {
+    border: 1px solid black;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.sm-menu li a {
+    text-decoration: none;
+}
+
+.sm-menu li {
+    list-style-type: none;
+}
+
+.open-btn,
+.close-btn {
+    font-size: 2rem;
+    font-weight: 700;
+    display: none;
+}
+
+@media only screen and (max-width: 720px) {
+    nav {
+        padding: .5rem 2rem;
+    }
+
+    .lg-menu-container {
+        display: none;
+    }
+
+    .sm-menu-container {
+        display: block;
+    }
+
+    .sm-logo {
+        display: block;
+    }
+
+    .sm-menu {
+        display: none;
+        padding: 1rem 2rem;
+    }
+
+    .open-btn {
+        display: block;
+    }
+
+    .logo-navbutton-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: antiquewhite;
+    }
+
+}
