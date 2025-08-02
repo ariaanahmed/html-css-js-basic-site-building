@@ -13,3 +13,17 @@ closeBtn.addEventListener('click', () => {
     smMenuEl.style.display = 'none';
     openBtn.style.display = 'block';
 });
+
+
+// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+document.addEventListener('keydown', function (event) {
+    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.shiftKey && event.key === 'J') || (event.ctrlKey && event.key === 'U')) {
+        event.preventDefault();
+    }
+});
+
+
+// disable right click on keyboard
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+});
