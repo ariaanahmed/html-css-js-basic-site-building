@@ -1,73 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
-
-nav {
-    padding: .5rem 2rem;
-    background-color: antiquewhite;
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.lg-logo img,
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+/* menu font */
+nav {
+    font-family: "Cascadia Code", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* large screen menu */
+.lg-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+.lg-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.lg-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.lg-menu li {
+    list-style-type: none;
+    background-color: #bbb;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.lg-menu li:hover {
+    background-color: rgb(211, 210, 210);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.lg-menu li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* small screen menu */
+.sm-menu-container {
+    display: none;
+}
+
+/* sm-logo-menuBtn-container */
+.sm-logo-menuBtn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
 .sm-logo img {
     width: 50px;
     height: 50px;
 }
 
-.lg-menu-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.lg-menu {
+.menu-buttons {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
 }
 
-.lg-menu li {
-    list-style-type: none;
+.menu-buttons:hover {
+    border: 3px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
 }
 
-/* small display menu here */
-.sm-menu-container {
-    display: none;
-}
-
-.sm-logo {
+.close-btn i {
     display: none;
 }
 
 .sm-menu {
-    display: none;
-    text-align: right;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 1;
+    transition: max-height 1s ease, opacity 1s ease;
     background-color: antiquewhite;
+    pointer-events: none;
 }
 
-.sm-menu li {
-    border: 1px solid black;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.sm-menu li a {
-    text-decoration: none;
+.show {
+    max-height: 450px;
+    opacity: 1;
 }
 
 .sm-menu li {
     list-style-type: none;
+    text-align: left;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid #bbb;
+    margin-bottom: 1px;
+    padding: 0.5rem 1rem;
 }
 
-.open-btn,
-.close-btn {
-    font-size: 2rem;
-    font-weight: 700;
-    display: none;
+.sm-menu li a {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 5px;
+    text-transform: uppercase;
 }
 
-@media only screen and (max-width: 720px) {
-    nav {
-        padding: .5rem 2rem;
-    }
+.sm-menu li a:hover {
+    text-decoration: underline;
+    transition: all 1s;
+    padding-bottom: 5px;
+}
 
+/* media query breakpoint */
+@media screen and (max-width: 700px) {
     .lg-menu-container {
         display: none;
     }
@@ -75,24 +144,4 @@ nav {
     .sm-menu-container {
         display: block;
     }
-
-    .sm-logo {
-        display: block;
-    }
-
-    .sm-menu {
-        display: none;
-        padding: 1rem 2rem;
-    }
-
-    .open-btn {
-        display: block;
-    }
-
-    .logo-navbutton-container {
-        display: flex;
-        justify-content: space-between;
-        background-color: antiquewhite;
-    }
-
 }
