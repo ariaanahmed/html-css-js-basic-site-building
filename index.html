@@ -4,31 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Functional Slider</title>
-    <link rel="shortcut icon" href="./Images/Icons/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./stylesheets/navbar.css">
+    <title>Navbar</title>
+    <link rel="shortcut icon" href="./Logo/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-
-    <style>
-        *,
-        ::before,
-        ::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    </style>
+    <link rel="stylesheet" href="./stylesheets/navbar.css">
+    <link rel="stylesheet" href="./stylesheets/banner.css">
 </head>
 
 <body>
-    <!-- header -->
-    <!-- ul.lg-menu-container>li*4>a  -->
     <header>
         <nav>
             <!-- lg screen menu -->
             <div class="lg-menu-container">
                 <div class="lg-logo">
-                    <img src="./Images/Icons/logo.png" alt="lg-logo">
+                    <img src="./Images/Logo/logo.png" alt="logo">
                 </div>
                 <ul class="lg-menu">
                     <li><a href="#">Home</a></li>
@@ -41,7 +30,7 @@
             <div class="sm-menu-container">
                 <div class="sm-logo-menuBtn-container">
                     <div class="sm-logo">
-                        <img src="./Images/Icons/logo.png" alt="sm-logo">
+                        <img src="./Images/Logo/logo.png" alt="sm-logo">
                     </div>
                     <button class="menu-buttons">
                         <span class="open-btn">
@@ -60,17 +49,55 @@
                 </ul>
             </div>
         </nav>
+        <!-- banner section -->
+        <section class="banner-container">
+            <div class="slide-container">
+                <div class="all-slides">
+                    <!-- image and slide number -->
+                    <div class="slide active">
+                        <img src="./Images/Slider/1.jpg" alt="Slide1">
+                        <h1>Slide 1</h1>
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Slider/2.jpg" alt="Slide2">
+                        <h1>Slide 2</h1>
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Slider/3.jpg" alt="Slide3">
+                        <h1>Slide 3</h1>
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Slider/4.jpg" alt="Slide4">
+                        <h1>Slide 4</h1>
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Slider/5.jpg" alt="Slide5">
+                        <h1>Slide 5</h1>
+                    </div>
+                </div>
+                <!-- left-right button -->
+                <div class="next-prev-button">
+                    <span class="next">&#62;</span>
+                    <span class="prev">&#60;</span>
+                </div>
+
+                <!-- dot point -->
+                 <div class="dots-container">
+                    <div class="dot active" attr="1"></div>
+                    <div class="dot" attr="2"></div>
+                    <div class="dot" attr="3"></div>
+                    <div class="dot" attr="4"></div>
+                    <div class="dot" attr="5"></div>
+                 </div>
+            </div>
+        </section>
     </header>
     <main>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
-        <h1>hello</h1>
     </main>
     <footer></footer>
 
     <script src="./js/navbar.js"></script>
+    <script src="./js/banner.js"></script>
 </body>
 
 </html>
