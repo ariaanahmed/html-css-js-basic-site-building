@@ -57,7 +57,7 @@ let deleteInterval;
 const autoPlaySlide = () => {
     deleteInterval = setInterval(() => {
         forwardSlides();
-    }, 1000);
+    }, 4000);
 };
 
 // Stop Autoplay on mouseover
