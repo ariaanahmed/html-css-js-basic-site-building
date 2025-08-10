@@ -135,6 +135,54 @@ nav {
     padding-bottom: 5px;
 }
 
+
+/* toggle button */
+.switch-container {
+    position: relative;
+    background-color: red;
+    display: block;
+    width: 60px;
+    height: 34px;
+    border-radius: 50px;
+}
+
+.switch-container input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.slider-btn {
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 3s;
+    border-radius: 50px;
+}
+
+.slider-btn::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+    background: #fff;
+    top: 4px;
+    left: 4px;
+    transition: 1s;
+}
+
+.switch-container input:checked+.slider-btn {
+    background-color: red;
+}
+
+.switch-container input:checked+.slider-btn::before {
+    transform: translateX(26px);
+}
+
 /* media query breakpoint */
 @media screen and (max-width: 700px) {
     .lg-menu-container {

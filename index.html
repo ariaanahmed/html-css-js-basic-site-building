@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="stylesheet" href="./stylesheets/navbar.css">
     <link rel="stylesheet" href="./stylesheets/banner.css">
+
+    <style>
+        .darkmode {
+            background-color: black;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,6 +30,10 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
+                    <label class="switch-container">
+                        <input type="checkbox">
+                        <span class="slider-btn"></span>
+                    </label>
                 </ul>
             </div>
             <!-- sm screen menu -->
@@ -82,13 +92,13 @@
                 </div>
 
                 <!-- dot point -->
-                 <div class="dots-container">
+                <div class="dots-container">
                     <div class="dot active" attr="1"></div>
                     <div class="dot" attr="2"></div>
                     <div class="dot" attr="3"></div>
                     <div class="dot" attr="4"></div>
                     <div class="dot" attr="5"></div>
-                 </div>
+                </div>
             </div>
         </section>
     </header>
@@ -97,6 +107,7 @@
     <footer></footer>
 
     <script src="./js/navbar.js"></script>
+    <script src="./js/darkmode.js"></script>
     <script src="./js/banner.js"></script>
 </body>
 
